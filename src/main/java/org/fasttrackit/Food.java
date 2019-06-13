@@ -8,8 +8,10 @@ public class Food {
     double weight;
     int availability;
 
-  //  LocalDate createdDate;
-    //mai avem de atribuit valoare
+int nutritionValue;
+int healthbonus;
+String foodType;
+String bagType;
 
 
 

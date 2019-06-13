@@ -10,5 +10,9 @@ public class Animal {
     String favouritefood;
     String favouritesport;
 
+    String color;
+    String furrtype;
+    String temper;
+    double weight;
 
 }
