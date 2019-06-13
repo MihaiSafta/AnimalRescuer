@@ -15,8 +15,9 @@ dog.favouritefood = "pizza";
 dog.favouritesport = "running";
 dog.foodlevel = 55;
 dog.happyness = 80;
+dog.healthlevel = 100;
 dog.name = "Athos";
-System.out.println("Dog name is " + dog.name);
+System.out.println("Dog name is " + dog.name + " he is " + dog.age + " years old " + " his favourite food is  " + dog.favouritefood + " , his favourite sport is " + dog.favouritesport + " , happiness level is " + dog.happyness + " % " + "and health level is " + dog.healthlevel + "%");
 
 
 Adopter Adopter = new Adopter();
