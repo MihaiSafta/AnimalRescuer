@@ -4,7 +4,7 @@ public class Activity {
     String name;
 
     String placeOfActivity;
-    int hoursPerDay;
+    double hoursPerDay;
     String animalsToPlayWith;
     int activityHealthBonus;
 }

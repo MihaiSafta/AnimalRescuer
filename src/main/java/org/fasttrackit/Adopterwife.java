@@ -1,4 +1,6 @@
-public class AdopterWife {
+package org.fasttrackit;
+
+public class Adopterwife {
     int age;
     String name;
     String animalsSheLikes;
