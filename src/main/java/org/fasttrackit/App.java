@@ -1,4 +1,7 @@
 package org.fasttrackit;
+
+import java.time.LocalDate;
+
 public class App
 {
     public static void main( String[] args )
@@ -47,8 +50,9 @@ dogfood.name = "Happy Dog";
 dogfood.stock = 5;
 dogfood.price = 125;
 dogfood.weight = 10.5;
-dogfood.setExpirationDate("31/12/2021");
- System.out.println("Food name is: " + dogfood.name + "." + "Price is: " + dogfood.price + "." + "Weight is :" + dogfood.weight + "." + " In stock : " + dogfood.stock + "." +"Expires on : " + dogfood.getExpirationDate()+ ".");
+//dogfood.setExpirationDate("31/12/2021");
+        dogfood.expirationDay = LocalDate.of(2020,11, 12);
+       System.out.println("Food name is: " + dogfood.name + "." + "Price is: " + dogfood.price + "." + "Weight is :" + dogfood.weight + "." + " In stock : " + dogfood.stock + "." +"Expires on : " + dogfood.expirationDay + ".");
 
 Activity activity = new Activity();
 activity.name = "Fetch" + " , " +"Running" + " , " + "Barking";

@@ -13,19 +13,26 @@ public class Food {
     double price;
     double weight;
     int stock;
-    Date expirationDate;
+    LocalDate expirationDay;
 
-    public Date getExpirationDate() {
-        return expirationDate;
-    }
+ public LocalDate getExpirationDay() {
 
-    public void setExpirationDate(String expirationDateString) {
-        try {
-            expirationDate = new SimpleDateFormat("dd/MM/yyyy").parse(expirationDateString);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+     return expirationDay;
+
     }
+    // Date expirationDate;
+
+   // public Date getExpirationDate() {
+     //   return expirationDate;
+    //}
+
+    //public void setExpirationDate(String expirationDateString) {
+      //  try {
+        //    expirationDate = new SimpleDateFormat("dd/MM/yyyy").parse(expirationDateString);
+        //} catch (ParseException e) {
+          //  e.printStackTrace();
+        //}
+   // }
 
 
 
