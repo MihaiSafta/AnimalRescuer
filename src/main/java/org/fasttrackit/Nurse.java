@@ -1,8 +1,7 @@
 package org.fasttrackit;
 
-public class Nurse {
-    int age;
-    String name;
+public class Nurse extends Person {
+
     double experience;
 
 }

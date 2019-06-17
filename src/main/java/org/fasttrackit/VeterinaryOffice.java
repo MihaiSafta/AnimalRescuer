@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class VeterinaryOffice {
+public class VeterinaryOffice extends Location {
     int doctors;
     int nurses;
     String doctorNameonDuty;
