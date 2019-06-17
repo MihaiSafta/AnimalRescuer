@@ -2,7 +2,10 @@ package org.fasttrackit;
 
 
 import javax.sound.midi.Soundbank;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Date;
 
 import static java.time.temporal.ChronoUnit.YEARS;
 
@@ -50,14 +53,14 @@ dog.healthlevel = 100;
 dog.name = "Athos";
 System.out.println("Dog name is " + dog.name + " he is " + dog.age + " years old " + " his favourite food is " + dog.favouritefood + ", his favourite sport is " + dog.favouritesport + " , happiness level is " + dog.happyness + " % " + "and health level is " + dog.healthlevel + "%.");
 
-Food food = new Food();
-  food.name = "Happy Dog";
-food.availability = 5;
-food.price = 125;
-food.weight = 10.5;
-        LocalDate today = LocalDate.now();
-        LocalDate ExpirationDate = today.plus(3, YEARS);
-System.out.println("Food name is: " + food.name + "." + "Price is: " + food.price + "." + "Weight is :" + food.weight + "." + " In stock : " + food.availability + "." +"Expires on : " + ExpirationDate + "." + "Today is :" + today);
+Food dogfood = new Food();
+  dogfood.name = "Happy Dog";
+dogfood.stock = 5;
+dogfood.price = 125;
+dogfood.weight = 10.5;
+dogfood.setExpirationDate("31/12/2021");
+
+        System.out.println("Food name is: " + dogfood.name + "." + "Price is: " + dogfood.price + "." + "Weight is :" + dogfood.weight + "." + " In stock : " + dogfood.stock + "." +"Expires on : " + dogfood.getExpirationDate()+ ".");
 
 Activity activity = new Activity();
 activity.name = "Fetch" + " , " +"Running" + " , " + "Barking";
