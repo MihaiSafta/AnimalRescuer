@@ -7,6 +7,10 @@ public class Adopter extends Person {
    private String preferedFurrType;
    private int otherPets;
 
+    public Adopter(int age, String name) {
+        super(age, name);
+    }
+
     public int getFunds() {
         return funds;
     }
@@ -39,9 +43,7 @@ public class Adopter extends Person {
         this.otherPets = otherPets;
     }
 
-    public Adopter(int age, String name) {
-        super(age, name);
-    }
+
 
     // public void FeedingMethod(  Animal animal, Food food){
 

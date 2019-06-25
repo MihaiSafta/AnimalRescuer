@@ -6,6 +6,11 @@ public class Vet extends Person{
     private double charge;
     private String animalsHeLikes;
 
+    public Vet(int age, String name) {
+        super(age, name);
+    }
+
+
     public String getSpecialization() {
         return specialization;
     }
@@ -38,9 +43,6 @@ public class Vet extends Person{
         this.animalsHeLikes = animalsHeLikes;
     }
 
-    public Vet(int age, String name) {
-        super(age, name);
-    }
 
 
 

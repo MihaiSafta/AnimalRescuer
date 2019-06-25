@@ -3,6 +3,10 @@ package org.fasttrackit;
 public class Location {
    private String address;
 
+    public Location(String address) {
+        this.address = address;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -11,7 +15,5 @@ public class Location {
         this.address = address;
     }
 
-    public Location(String address) {
-        this.address = address;
-    }
+
 }

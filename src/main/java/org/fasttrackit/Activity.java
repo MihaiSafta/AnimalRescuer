@@ -6,6 +6,11 @@ public class Activity {
   private double hoursPerDay;
   private String animalsToPlayWith;
   private int activityHealthBonus;
+    public Activity(String name, String placeOfActivity, double hoursPerDay) {
+        this.name = name;
+        this.placeOfActivity = placeOfActivity;
+        this.hoursPerDay = hoursPerDay;
+    }
 
     public String getName() {
         return name;
@@ -47,9 +52,5 @@ public class Activity {
         this.activityHealthBonus = activityHealthBonus;
     }
 
-    public Activity(String name, String placeOfActivity, double hoursPerDay) {
-        this.name = name;
-        this.placeOfActivity = placeOfActivity;
-        this.hoursPerDay = hoursPerDay;
-    }
+
 }

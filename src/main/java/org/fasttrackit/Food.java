@@ -19,6 +19,12 @@ public class Food {
     private  String bagType;
     private  LocalDate expirationDay;
 
+    public Food(String name, double price, double weight) {
+        this.name = name;
+        this.price = price;
+        this.weight = weight;
+    }
+
     public String getName() {
         return name;
     }
@@ -87,11 +93,7 @@ public class Food {
         this.expirationDay = expirationDay;
     }
 
-    public Food(String name, double price, double weight) {
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
-    }
+
 
     public LocalDate getExpirationDay() {
 

@@ -4,6 +4,10 @@ public class Adopterwife extends Person{
     private String animalsSheLikes;
     private String animalsSheDoesNotLike;
     private int previuousPets;
+    public Adopterwife(int age, String name) {
+        super(age, name);
+    }
+
 
     public String getAnimalsSheLikes() {
         return animalsSheLikes;
@@ -29,7 +33,4 @@ public class Adopterwife extends Person{
         this.previuousPets = previuousPets;
     }
 
-    public Adopterwife(int age, String name) {
-        super(age, name);
-    }
 }

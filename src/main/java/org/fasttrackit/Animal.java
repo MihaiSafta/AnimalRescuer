@@ -13,6 +13,11 @@ public class Animal {
  private String temper;
  private double weight;
 
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public String getName() {
         return name;
     }
@@ -101,8 +106,5 @@ public class Animal {
         this.weight = weight;
     }
 
-    public Animal(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+
 }
