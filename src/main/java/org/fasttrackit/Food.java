@@ -13,13 +13,28 @@ public class Food {
     double price;
     double weight;
     int stock;
+    int nutritionValue;
+    int healthbonus;
+    String foodType;
+    String bagType;
     LocalDate expirationDay;
 
- public LocalDate getExpirationDay() {
+
+
+    public Food(String name, double price, double weight) {
+        this.name = name;
+        this.price = price;
+        this.weight = weight;
+    }
+
+    public LocalDate getExpirationDay() {
 
      return expirationDay;
 
     }
+
+
+
     // Date expirationDate;
 
    // public Date getExpirationDate() {
@@ -32,15 +47,9 @@ public class Food {
         //} catch (ParseException e) {
           //  e.printStackTrace();
         //}
+   //
    // }
 
-
-
-
-int nutritionValue;
-int healthbonus;
-String foodType;
-String bagType;
 
 
 

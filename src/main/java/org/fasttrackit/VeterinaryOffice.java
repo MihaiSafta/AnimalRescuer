@@ -8,4 +8,9 @@ public class VeterinaryOffice extends Location {
     int appointmentsToday;
     int placeInLine;
 
+    public VeterinaryOffice(String address, int doctors, int nurses) {
+        super(address);
+        this.doctors = doctors;
+        this.nurses = nurses;
+    }
 }

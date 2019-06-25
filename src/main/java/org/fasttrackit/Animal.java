@@ -15,4 +15,8 @@ public class Animal {
     String temper;
     double weight;
 
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }
