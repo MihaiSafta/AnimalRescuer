@@ -9,17 +9,83 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Food {
-    String name;
-    double price;
-    double weight;
-    int stock;
-    int nutritionValue;
-    int healthbonus;
-    String foodType;
-    String bagType;
-    LocalDate expirationDay;
+    private  String name;
+    private  double price;
+    private  double weight;
+    private  int stock;
+    private  int nutritionValue;
+    private  int healthbonus;
+    private  String foodType;
+    private  String bagType;
+    private  LocalDate expirationDay;
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public int getNutritionValue() {
+        return nutritionValue;
+    }
+
+    public void setNutritionValue(int nutritionValue) {
+        this.nutritionValue = nutritionValue;
+    }
+
+    public int getHealthbonus() {
+        return healthbonus;
+    }
+
+    public void setHealthbonus(int healthbonus) {
+        this.healthbonus = healthbonus;
+    }
+
+    public String getFoodType() {
+        return foodType;
+    }
+
+    public void setFoodType(String foodType) {
+        this.foodType = foodType;
+    }
+
+    public String getBagType() {
+        return bagType;
+    }
+
+    public void setBagType(String bagType) {
+        this.bagType = bagType;
+    }
+
+    public void setExpirationDay(LocalDate expirationDay) {
+        this.expirationDay = expirationDay;
+    }
 
     public Food(String name, double price, double weight) {
         this.name = name;
