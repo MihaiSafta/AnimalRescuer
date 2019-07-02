@@ -2,10 +2,10 @@ package org.fasttrackit;
 
 public class Adopter extends Person {
 
-   private int funds;
-   private String preferedAnimal;
-   private String preferedFurrType;
-   private int otherPets;
+    private int funds;
+    private String preferedAnimal;
+    private String preferedFurrType;
+    private int otherPets;
 
     public Adopter(int age, String name) {
         super(age, name);
@@ -44,13 +44,17 @@ public class Adopter extends Person {
     }
 
 
+public void feeding(String Animal, String Food){
+    System.out.println(getName() +" is giving some "+ Food + " food " + " to " + Animal);
+}
 
-    // public void FeedingMethod(  Animal animal, Food food){
+public void playing(String Animal, String Activity){
+    System.out.println(getName() + " is playing " + Activity + " with " + Animal);
+}
+}
 
-       // System.out.println(adopter+ );
 
 
-    }
 
 
 
