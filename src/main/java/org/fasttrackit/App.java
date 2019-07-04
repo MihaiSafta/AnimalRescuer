@@ -62,8 +62,8 @@ public class App
         System.out.println("At the Veterinary Office is locates at :" + vetoffice.getAddress() + ", there are today " + vetoffice.getDoctors() + " doctors and " + vetoffice.getNurses() + " nurses." + "Doctor and nurse on duty today are " + vetoffice.getDoctorNameonDuty() + " and " + vetoffice.getNurseNameonDuty() + "." + "Total appointments for today are " + vetoffice.getAppointmentsToday() + " and place in line is number:" + vetoffice.getPlaceInLine() + ".");
 
 
-Adopter.feeding("Chaika", "Purina");
-Adopter.playing("Chaika","running around");
+Adopter.feeding(dog,dogfood);
+Adopter.playing(dog,activity);
 
     }
 
