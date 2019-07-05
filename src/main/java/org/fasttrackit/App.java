@@ -25,12 +25,7 @@ public class App
         System.out.println("Adopters wife is " + adopterwife.getName() + "," + "she is " + adopterwife.getAge() + " years old." + "She likes " + adopterwife.getAnimalsSheLikes() + ", she doesnt like " + adopterwife.getAnimalsSheDoesNotLike() + ", and she had " + adopterwife.getPreviuousPets() + " previous pets.");
 
 
-        Animal dog = new Animal("Athos", 3);
-        dog.setFavouritefood("pizza");
-        dog.setFavouritesport("running");
-        dog.setFoodlevel(55);
-        dog.setHappyness(80);
-        dog.setHealthlevel(100);
+        Animal dog = new Animal("Athos", 3,90,60,50,"Pufarin","drinking","dark-grey","smooth", "angry",12);
         System.out.println("Dog name is " + dog.getName() + " he is " + dog.getAge() + " years old " + " his favourite food is " + dog.getFavouritefood() + ", his favourite sport is " + dog.getFavouritesport() + " , happiness level is " + dog.getHappyness() + " % " + "and health level is " + dog.getHealthlevel() + "%.");
 
         Food dogfood = new Food("Happy Dog", 12.99, 25);
@@ -65,6 +60,11 @@ public class App
 Adopter.feeding(dog,dogfood);
 Adopter.playing(dog,activity);
 
+    Dog dog2 = new Dog("Coconut",5,100,100,100,"Pufarin","swimming", "grey","cursly","calm", 8);
+    dog2.goodcheer();
+
+    Cat cat = new Cat("Gombot",16, 10, 30,5,"water","sleeping", "black", "smooth","lazy",7);
+    cat.goodcheer();
     }
 
 

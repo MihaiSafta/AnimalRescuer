@@ -13,9 +13,18 @@ public class Animal {
  private String temper;
  private double weight;
 
-    public Animal(String name, int age) {
+    public Animal(String name, int age, int healthlevel, int foodlevel, int happyness, String favouritefood, String favouritesport, String color, String furrtype, String temper, double weight) {
         this.name = name;
         this.age = age;
+        this.healthlevel = healthlevel;
+        this.foodlevel = foodlevel;
+        this.happyness = happyness;
+        this.favouritefood = favouritefood;
+        this.favouritesport = favouritesport;
+        this.color = color;
+        this.furrtype = furrtype;
+        this.temper = temper;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -104,6 +113,10 @@ public class Animal {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public  void goodcheer(){
+        System.out.println("Animal is happy");
     }
 
 
