@@ -60,10 +60,10 @@ public class App
 Adopter.feeding(dog,dogfood);
 Adopter.playing(dog,activity);
 
-    Dog dog2 = new Dog("Coconut",5,100,100,100,"Pufarin","swimming", "grey","cursly","calm", 8);
+    Animal dog2 = new Dog("Coconut",5,100,100,100,"Pufarin","swimming", "grey","cursly","calm", 8);
     dog2.goodcheer();
 
-    Cat cat = new Cat("Gombot",16, 10, 30,5,"water","sleeping", "black", "smooth","lazy",7);
+    Animal cat = new Cat("Gombot",16, 10, 30,5,"water","sleeping", "black", "smooth","lazy",7);
     cat.goodcheer();
     }
 
