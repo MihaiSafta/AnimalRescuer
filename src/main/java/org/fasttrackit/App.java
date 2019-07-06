@@ -25,11 +25,7 @@ public class App
         System.out.println("Adopters wife is " + adopterwife.getName() + "," + "she is " + adopterwife.getAge() + " years old." + "She likes " + adopterwife.getAnimalsSheLikes() + ", she doesnt like " + adopterwife.getAnimalsSheDoesNotLike() + ", and she had " + adopterwife.getPreviuousPets() + " previous pets.");
 
 
-        Animal dog = new Animal("Athos", 3,90,60,50,"Pufarin","drinking","dark-grey","smooth", "angry",12);
-        System.out.println("Dog name is " + dog.getName() + " he is " + dog.getAge() + " years old " + " his favourite food is " + dog.getFavouritefood() + ", his favourite sport is " + dog.getFavouritesport() + " , happiness level is " + dog.getHappyness() + " % " + "and health level is " + dog.getHealthlevel() + "%.");
-
         Food dogfood = new Food("Happy Dog", 12.99, 25);
-        dogfood.setWeight(10.5);
         dogfood.setExpirationDay(LocalDate.of(2020,4,10));
         System.out.println("Food name is: " + dogfood.getName() + "." + "Price is: " + dogfood.getPrice() + "." + "Weight is :" + dogfood.getWeight() + "." + " In stock : " + dogfood.getStock() + "." + "Expires on : " + dogfood.getExpirationDay() + ".");
 
@@ -57,14 +53,23 @@ public class App
         System.out.println("At the Veterinary Office is locates at :" + vetoffice.getAddress() + ", there are today " + vetoffice.getDoctors() + " doctors and " + vetoffice.getNurses() + " nurses." + "Doctor and nurse on duty today are " + vetoffice.getDoctorNameonDuty() + " and " + vetoffice.getNurseNameonDuty() + "." + "Total appointments for today are " + vetoffice.getAppointmentsToday() + " and place in line is number:" + vetoffice.getPlaceInLine() + ".");
 
 
-Adopter.feeding(dog,dogfood);
-Adopter.playing(dog,activity);
+//Adopter.feeding(dog,dogfood);
+//Adopter.playing(dog,activity);
 
-    Animal dog2 = new Dog("Coconut",5,100,100,100,"Pufarin","swimming", "grey","cursly","calm", 8);
-    dog2.goodcheer();
+        Animal dog2 = new Dog("Clul",12,90,100,100,"junk","running","red", "bald", "relaxed", 11);
+        dog2.goodcheer();
+        System.out.println(dog2);
 
-    Animal cat = new Cat("Gombot",16, 10, 30,5,"water","sleeping", "black", "smooth","lazy",7);
-    cat.goodcheer();
+        Adopter.feeding(dog2,dogfood);
+        Adopter.playing(dog2,activity);
+
+
+        Animal cat = new Cat("Luli",12,100,100,50,"meat", "jumping", "red","smooth", "calm", 5);
+        cat.goodcheer();
+        System.out.println(cat);
+
+
+
     }
 
 

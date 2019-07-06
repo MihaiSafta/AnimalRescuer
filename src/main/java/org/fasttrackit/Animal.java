@@ -1,17 +1,18 @@
 package org.fasttrackit;
 
 public class Animal {
- private String name;
- private int age;
- private int healthlevel;
- private int foodlevel;
- private int happyness;
- private String favouritefood;
- private String favouritesport;
- private String color;
- private String furrtype;
- private String temper;
- private double weight;
+
+    private String name;
+    private int age;
+    private int healthlevel;
+    private int foodlevel;
+    private int happyness;
+    private String favouritefood;
+    private String favouritesport;
+    private String color;
+    private String furrtype;
+    private String temper;
+    private double weight;
 
     public Animal(String name, int age, int healthlevel, int foodlevel, int happyness, String favouritefood, String favouritesport, String color, String furrtype, String temper, double weight) {
         this.name = name;
@@ -25,6 +26,23 @@ public class Animal {
         this.furrtype = furrtype;
         this.temper = temper;
         this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", healthlevel=" + healthlevel +
+                ", foodlevel=" + foodlevel +
+                ", happyness=" + happyness +
+                ", favouritefood='" + favouritefood + '\'' +
+                ", favouritesport='" + favouritesport + '\'' +
+                ", color='" + color + '\'' +
+                ", furrtype='" + furrtype + '\'' +
+                ", temper='" + temper + '\'' +
+                ", weight=" + weight +
+                '}';
     }
 
     public String getName() {
