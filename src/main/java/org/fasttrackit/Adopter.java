@@ -43,12 +43,17 @@ public class Adopter extends Person {
         this.otherPets = otherPets;
     }
 
+
     public void feeding(Animal animal, Food food) {
+        animal.setFoodlevel(animal.getFoodlevel() - 1);
         System.out.println(getName() + " is giving some " + food.getName() + " food " + " to " + animal.getName());
+        System.out.println("Food level after feeding is: " + animal.getFoodlevel());
     }
 
+
     public void playing(Animal animal, Activity activity) {
-        System.out.println(getName() + " is playing " + activity.getName() + " with " + animal.getName());
+        animal.setHappyness(animal.getHappyness() + 1);
+        System.out.println(getName() + " is playing " + activity.getName() + " with " + animal.getName() + ", happiness lvl is now : " +animal.getHappyness());
     }
 }
 

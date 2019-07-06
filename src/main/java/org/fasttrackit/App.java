@@ -53,8 +53,6 @@ public class App
         System.out.println("At the Veterinary Office is locates at :" + vetoffice.getAddress() + ", there are today " + vetoffice.getDoctors() + " doctors and " + vetoffice.getNurses() + " nurses." + "Doctor and nurse on duty today are " + vetoffice.getDoctorNameonDuty() + " and " + vetoffice.getNurseNameonDuty() + "." + "Total appointments for today are " + vetoffice.getAppointmentsToday() + " and place in line is number:" + vetoffice.getPlaceInLine() + ".");
 
 
-//Adopter.feeding(dog,dogfood);
-//Adopter.playing(dog,activity);
 
         Animal dog2 = new Dog("Clul",12,90,100,100,"junk","running","red", "bald", "relaxed", 11);
         dog2.goodcheer();
@@ -62,11 +60,15 @@ public class App
 
         Adopter.feeding(dog2,dogfood);
         Adopter.playing(dog2,activity);
+        Adopter.feeding(dog2,dogfood);
 
 
         Animal cat = new Cat("Luli",12,100,100,50,"meat", "jumping", "red","smooth", "calm", 5);
         cat.goodcheer();
         System.out.println(cat);
+        Adopter.playing(cat,activity);
+        Adopter.playing(cat,activity);
+        Adopter.playing(cat,activity);
 
 
 
