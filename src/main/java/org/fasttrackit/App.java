@@ -29,7 +29,7 @@ public class App
         dogfood.setExpirationDay(LocalDate.of(2020,4,10));
         System.out.println("Food name is: " + dogfood.getName() + "." + "Price is: " + dogfood.getPrice() + "." + "Weight is :" + dogfood.getWeight() + "." + " In stock : " + dogfood.getStock() + "." + "Expires on : " + dogfood.getExpirationDay() + ".");
 
-        Activity activity = new Activity("Fetch", "Park", 4);
+        Activity activity = new Activity("jumping", "Park", 4);
         System.out.println("Favourite activity is : " + activity.getName() + " Favourite place is : " + activity.getPlaceOfActivity() + ". Duration : " + activity.getHoursPerDay() + " hours per day");
 
         Vet vet = new Vet(30,"Tim");
@@ -58,16 +58,13 @@ public class App
         dog2.goodcheer();
         System.out.println(dog2);
 
-        Adopter.feeding(dog2,dogfood);
-        Adopter.playing(dog2,activity);
-        Adopter.feeding(dog2,dogfood);
 
-
+Food catfood = new Food("meat", 150, 55);
         Animal cat = new Cat("Luli",12,100,100,50,"meat", "jumping", "red","smooth", "calm", 5);
         cat.goodcheer();
         System.out.println(cat);
         Adopter.playing(cat,activity);
-        Adopter.playing(cat,activity);
+        Adopter.feeding(cat,catfood);
         Adopter.playing(cat,activity);
 
 
