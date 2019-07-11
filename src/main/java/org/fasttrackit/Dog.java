@@ -9,6 +9,6 @@ public class Dog extends Animal{
     @Override
     public void goodcheer() {
         super.goodcheer();
-        System.out.println("Dog is wiggling his tail ");
+        System.out.println(getName() + " is wiggling his tail.");
     }
 }
