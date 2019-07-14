@@ -133,7 +133,7 @@ public class Animal {
         this.weight = weight;
     }
 
-    public  void goodcheer(){
+    public void goodcheer() {
         System.out.println("Animal is happy");
     }
 

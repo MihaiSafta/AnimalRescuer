@@ -47,8 +47,8 @@ public class Adopter extends Person {
     public void feeding(Animal animal, Food food) {
         System.out.println(getName() + " is giving some " + food.getName() + " food " + " to " + animal.getName());
         animal.setFoodlevel(animal.getFoodlevel() - 1);
-        if(animal.getFavouritefood().equals(food.getName())){
-            animal.setHappyness(animal.getHappyness() + 1 );
+        if (animal.getFavouritefood().equals(food.getName())) {
+            animal.setHappyness(animal.getHappyness() + 1);
             System.out.println("Happiness level received bonus +1, it is now: " + animal.getHappyness());
         }
         System.out.println("Food level after feeding is: " + animal.getFoodlevel());
@@ -58,11 +58,12 @@ public class Adopter extends Person {
     public void playing(Animal animal, Activity activity) {
         System.out.println(getName() + " is playing " + activity.getName() + " with " + animal.getName());
 
-        if(animal.getFavouritesport().equals(activity.getName())){
+        if (animal.getFavouritesport().equals(activity.getName())) {
             animal.setHappyness(animal.getHappyness() + 2);
             System.out.println("Bonus +2 for favourite activity!");
-        }else {
-        animal.setHappyness(animal.getHappyness() + 1);}
+        } else {
+            animal.setHappyness(animal.getHappyness() + 1);
+        }
         System.out.println(" Happiness lvl is now : " + animal.getHappyness());
     }
 }

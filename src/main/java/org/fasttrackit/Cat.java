@@ -11,7 +11,7 @@ public class Cat extends Animal {
     @Override
     public void goodcheer() {
         super.goodcheer();
-        System.out.println(getName()+ " is purring");
+        System.out.println(getName() + " is purring");
     }
 }
 

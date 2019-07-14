@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class Home extends Location{
+public class Home extends Location {
 
     private int homeSize;
     private int otherPets;

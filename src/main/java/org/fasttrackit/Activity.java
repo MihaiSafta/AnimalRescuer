@@ -1,11 +1,12 @@
 package org.fasttrackit;
 
 public class Activity {
-  private String name;
-  private String placeOfActivity;
-  private double hoursPerDay;
-  private String animalsToPlayWith;
-  private int activityHealthBonus;
+    private String name;
+    private String placeOfActivity;
+    private double hoursPerDay;
+    private String animalsToPlayWith;
+    private int activityHealthBonus;
+
     public Activity(String name, String placeOfActivity, double hoursPerDay) {
         this.name = name;
         this.placeOfActivity = placeOfActivity;
