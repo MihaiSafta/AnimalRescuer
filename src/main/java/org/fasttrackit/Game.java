@@ -1,16 +1,17 @@
 package org.fasttrackit;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Game {
-    private String adopter;
-    private String dog;
-    private String vet;
-    private int gamenumber;
 
     private List<Food> availebleFood = new ArrayList<>();
     private Activity[] availebleActivities = new Activity[3];
+
+    private Adopter adopter;
+    private Animal animal;
 
 
     private void initFood() {
@@ -23,7 +24,7 @@ public class Game {
 
     private void printFood() {
         System.out.print("Available food is: ");
-        for(Food food : availebleFood){
+        for (Food food : availebleFood) {
             System.out.print(food.getName() + " ");
         }
         System.out.println();
@@ -44,19 +45,45 @@ public class Game {
             for (int i = 0; i < availebleActivities.length; i++) {
                 System.out.print(availebleActivities[i].getName() + " ");
             }
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
 
         }
         System.out.println();
     }
 
+    private void initAnimal() {
+        System.out.println("Welcome! Please select your animal! Available animals are cat and dog.");
+        System.out.println("Selected animal is:");
+        Scanner scanner = new Scanner(System.in);
+        String animalType = scanner.nextLine();
+        animal = new Animal();
+    }
+
+    private void initAdopter() {
+        System.out.println("Pease enter adopter name:");
+        Scanner scanner = new Scanner(System.in);
+        String adopterName = scanner.nextLine();
+        System.out.println("Please enter adopter age:");
+        int adopterAge = scanner.nextInt();
+        adopter = new Adopter(adopterAge, adopterName);
+        System.out.println("Adopter is:" + adopter.getName() + ", and has " + " " + adopter.getAge() + "years");
+    }
+
+
+    private void nameAnimal() {
+        System.out.println("Please select animal name");
+        Scanner scanner = new Scanner(System.in);
+        String animalName = scanner.nextLine();
+        animal.setName(animalName);
+        System.out.println("Animal name is: " + animal.getName());
+    }
+
 
     public void start() {
 
-        initActivities();
-        initFood();
-        printFood();
-        printActivities();
+        initAnimal();
+        initAdopter();
+        nameAnimal();
     }
 
     private void initActivities() {
@@ -70,43 +97,8 @@ public class Game {
     public void listAvailebleFood() {
 
     }
-
-    public Game(String adopter, String dog, String vet, int gamenumber) {
-        this.adopter = adopter;
-        this.dog = dog;
-        this.vet = vet;
-        this.gamenumber = gamenumber;
-    }
-
-    public String getAdopter() {
-        return adopter;
-    }
-
-    public void setAdopter(String adopter) {
-        this.adopter = adopter;
-    }
-
-    public String getDog() {
-        return dog;
-    }
-
-    public void setDog(String dog) {
-        this.dog = dog;
-    }
-
-    public String getVet() {
-        return vet;
-    }
-
-    public void setVet(String vet) {
-        this.vet = vet;
-    }
-
-    public int getGamenumber() {
-        return gamenumber;
-    }
-
-    public void setGamenumber(int gamenumber) {
-        this.gamenumber = gamenumber;
-    }
 }
+
+
+
+
