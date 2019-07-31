@@ -24,6 +24,9 @@ public class Food {
         this.price = price;
         this.weight = weight;
     }
+    public Food(){
+
+    }
 
     public String getName() {
         return name;

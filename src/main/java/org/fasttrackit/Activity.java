@@ -13,6 +13,10 @@ public class Activity {
         this.hoursPerDay = hoursPerDay;
     }
 
+    public Activity() {
+
+    }
+
     public String getName() {
         return name;
     }

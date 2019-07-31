@@ -28,6 +28,10 @@ public class Animal {
         this.weight = weight;
     }
 
+    public Animal() {
+
+    }
+
     @Override
     public String toString() {
         return "Animal{" +
