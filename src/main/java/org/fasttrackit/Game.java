@@ -140,7 +140,7 @@ public class Game {
                 break;
             }
                 if (animal.getFoodlevel() < 0) {
-                    System.out.println("Game Over! Animal has starved! You lasted for: " + dayNumber + "days");
+                    System.out.println("Game Over! Animal has starved! You lasted for: " + dayNumber + " days");
                     break;
                 }
 
