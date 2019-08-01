@@ -23,40 +23,31 @@ public class Game {
         availableFood.add(food2);
         availableFood.add(new Food("monsterMeat", 100, 90));
     }
+
     private void initActivities() {
         Activity activity1 = new Activity("running", "in the park", 6);
         Activity activity2 = new Activity("jumping", "in the park", 2);
-        Activity activity3 = new Activity("sleeping", "bed",8);
+        Activity activity3 = new Activity("sleeping", "bed", 8);
         availableActivities[0] = activity1;
         availableActivities[1] = activity2;
         availableActivities[2] = activity3;
     }
 
     private void printFood() {
-        System.out.print("Available food is: ");
-        for (Food food : availableFood) {
-            System.out.print(food.getName() + " ");
+
+        for (int i = 0; i < availableFood.size(); i++) {
+            System.out.print(availableFood.get(i).getName() + " ");
         }
         System.out.println();
-//        for (int i = 0; i < availableFood.size(); i++) {
-//            System.out.print(availableFood.get(i).getName() + " ");
-//        }
-//        System.out.println();
     }
 
     private void printActivities() {
 
         System.out.print("Available activities are: ");
-//        for(Activity activity : availableActivities){
-//            System.out.print(activity.getName() + " ");
-//        }
- //    System.out.println();
-        try {int size = availableActivities.length;
-            for (int i = 0; i < size; i++) {
-                System.out.print(availableActivities[i].getName() + " ");
+        for (Activity activity : availableActivities) {
+            if (availableActivities != null) {
+                System.out.print(activity.getName() + " ");
             }
-        } catch (NullPointerException e) {
-
         }
         System.out.println();
     }
@@ -69,9 +60,9 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         String animalType = scanner.nextLine();
         System.out.println("You have selected:" + animalType);
-        animal.setHappyness(100);
-        animal.setFoodlevel(100);
-        animal.setHealthlevel(100);
+        animal.setHappyness(5);
+        animal.setFoodlevel(5);
+        animal.setHealthlevel(5);
     }
 
     private void initAdopter() {
@@ -79,13 +70,18 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         String adopterName = scanner.nextLine();
         System.out.println("Please enter adopter age:");
-        int adopterAge = scanner.nextInt();
-        adopter = new Adopter(adopterAge, adopterName);
-        System.out.println("Adopter is:" + adopter.getName() + ", and has " + " " + adopter.getAge() + " years");
+        try {
+            int adopterAge = scanner.nextInt();
+            adopter = new Adopter(adopterAge, adopterName);
+            System.out.println("Adopter is:" + adopter.getName() + ", and has " + " " + adopter.getAge() + " years");
+        } catch (InputMismatchException e) {
+            System.out.println("You have entered an invalid age number! Please try again!");
+            initAdopter();
+        }
     }
 
     private void nameAnimal() {
-        System.out.println("Please select animal name");
+        System.out.println("Please select animal name: ");
         Scanner scanner = new Scanner(System.in);
         String animalName = scanner.nextLine();
         animal.setName(animalName);
@@ -99,12 +95,12 @@ public class Game {
     }
 
     private void requireFeeding() {
-        System.out.println("You can feed your animal:");
+        System.out.print("You can feed your animal:");
         for (int i = 0; i < availableFood.size(); i++) {
             System.out.print(availableFood.get(i).getName() + " ");
         }
         food = new Food();
-        System.out.println("Please select a food type:");
+        System.out.println("Please select a food type, or none.");
         Scanner scanner = new Scanner(System.in);
         String selectedFood = scanner.nextLine();
         food.setName(selectedFood);
@@ -114,27 +110,57 @@ public class Game {
 
     private void requireActivity() {
         System.out.println("You can play with your animal:");
-       for(int i = 0; i<availableActivities.length; i++){
-            System.out.print(availableActivities[i].getName() + "");
-        }
+        printActivities();
+        activity = new Activity();
         System.out.println("Please select an activity:");
         Scanner scanner = new Scanner(System.in);
         String selectedActivity = scanner.nextLine();
         activity.setName(selectedActivity);
         System.out.println("You have selected: " + activity.getName());
-        adopter.playing(animal,activity);
-            }
+        adopter.playing(animal, activity);
+    }
 
     public void start() {
-        //initAnimal();
-        //initAdopter();
-       // initFood();
-       // nameAnimal();
+        initActivities();
+        initAnimal();
+        initAdopter();
+        initFood();
+        nameAnimal();
         //requireFeeding();
         //requireActivity();
-    printActivities();
+        int dayNumber = 1;
+        boolean winnerNotKnown = true;
+        while (winnerNotKnown && animal.getHealthlevel() > 0 || animal.getFoodlevel() > 0) {
+            System.out.println("It is now day number: " + dayNumber++);
+            requireFeeding();
+            requireActivity();
+            if (animal.getHappyness() >= 10) {
+                System.out.println("Congrats you have won!");
+                winnerNotKnown = false;
+                break;
+            }
+                if (animal.getFoodlevel() < 0) {
+                    System.out.println("Game Over! Animal has starved! You lasted for: " + dayNumber + "days");
+                    break;
+                }
+
+        }
+
     }
-    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

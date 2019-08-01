@@ -46,12 +46,16 @@ public class Adopter extends Person {
 
     public void feeding(Animal animal, Food food) {
         System.out.println(getName() + " is giving some " + food.getName() + " food " + " to " + animal.getName());
-        animal.setFoodlevel(animal.getFoodlevel() - 1);
+        animal.setFoodlevel(animal.getFoodlevel() + 2);
         if (animal.getFavouritefood().equals(food.getName())) {
             animal.setHappyness(animal.getHappyness() + 1);
             System.out.println("Happiness level received bonus +1, it is now: " + animal.getHappyness());
         }
-        System.out.println("Food level after feeding is: " + animal.getFoodlevel());
+        if (food.getName().contains("none")) {
+            animal.setFoodlevel(animal.getFoodlevel() - 5);
+            System.out.println("You did not feed your animal!" + " Food lvl " + "is now " + animal.getFoodlevel());
+        }
+        System.out.println("Food level after feeding is: " + animal.getFoodlevel() + " hitpoints = " + animal.getHealthlevel());
     }
 
 
@@ -60,11 +64,19 @@ public class Adopter extends Person {
 
         if (animal.getFavouritesport().equals(activity.getName())) {
             animal.setHappyness(animal.getHappyness() + 2);
+            animal.setFoodlevel(animal.getFoodlevel() - 1);
+            animal.setHealthlevel(animal.getHealthlevel() + 1);
             System.out.println("Bonus +2 for favourite activity!");
         } else {
             animal.setHappyness(animal.getHappyness() + 1);
+            animal.setFoodlevel(animal.getFoodlevel() - 1);
+            animal.setHealthlevel(animal.getHealthlevel() + 1);
         }
-        System.out.println(" Happiness lvl is now : " + animal.getHappyness());
+        if (activity.getName().contains("none")) {
+            animal.setHealthlevel(animal.getHealthlevel() - 5);
+            System.out.println("You did not play with your animal!" + "Health level decresed by : " + animal.getHealthlevel());
+        }
+        System.out.println(" Happiness lvl is now : " + animal.getHappyness() +" and "+ "food lvl is: " + animal.getFoodlevel() + " hitpoints = " + animal.getHealthlevel());
     }
 }
 
