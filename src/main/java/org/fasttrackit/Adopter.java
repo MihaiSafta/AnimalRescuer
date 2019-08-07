@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import domain.Animal;
+
 public class Adopter extends Person {
 
     private int funds;

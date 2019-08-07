@@ -1,4 +1,6 @@
-package org.fasttrackit;
+package domain;
+
+import domain.Animal;
 
 public class Cat extends Animal {
 

@@ -1,13 +1,14 @@
-package org.fasttrackit;
+package domain;
 
 public class Animal {
 
+    private int id;
     private String name;
-    private int age;
+        private int age;
     private int healthlevel;
     private int foodlevel;
     private int happyness;
-    private String favouritefood;
+        private String favouritefood;
     private String favouritesport;
     private String color;
     private String furrtype;
